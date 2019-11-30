@@ -1,0 +1,135 @@
+$mainColor:#6574d6;
+$borderRadius : 4px;
+body{
+    margin: 0;
+    background: #85a5d4;
+    font-family: 'Roboto','Sans-Serif';
+}
+
+.modal_window_container{
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.192); 
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    .modal_window{
+        border-radius: $borderRadius;
+        padding: 15px 20px 25px 20px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card{
+            padding: 0px;
+            width: auto;
+        }
+    }
+    #close_button{
+        
+        width:100%;
+        
+        margin-bottom: -25px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 20px;
+       img{
+            cursor: pointer;
+            height: 20px;
+           
+       }
+    }
+    .modal_header{
+        justify-content: center;
+        display: flex;
+    
+    }
+    button{
+        cursor: pointer;
+        background: #2a5aff;
+        border:none;
+        color:rgba(255, 255, 255, 0.89);
+        
+        padding: 8px 16px;
+        border-radius: $borderRadius;
+
+    }
+   
+  
+ 
+}
+
+
+#main_container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    
+    .card_container{
+        justify-content: center;
+        margin-top: 160px;
+
+        display: flex;
+        flex-wrap: wrap;
+       
+        background: white;
+        border-radius:$borderRadius;
+        padding: 15px 30px;
+        height: fit-content;
+        .card{
+            &:hover{
+                background: #f6f6f6;
+                cursor: pointer;
+            }
+        }
+     
+      
+    }
+    
+}
+.card{
+    font-size: 120%;
+    background: white;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 275px;
+    text-align: center;
+    padding: 10px;
+    
+    border-radius: $borderRadius;
+    div{
+        margin-bottom:20px;
+    }
+    .icon{
+        img{
+            width:75px;
+        }
+      
+    }
+    .title{
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: $mainColor;
+    }
+    .description{
+            color: #ababad;
+            font-weight: 500;
+            font-size: 90%;
+    }
+    .cost{
+        color: $mainColor;
+        font-weight: 600;
+        font-size: 120%;
+        small{
+            font-size: 70%;
+        }
+    }
+}
